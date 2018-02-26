@@ -7,6 +7,7 @@ import {AppComponent} from './app.component';
 import {App1LoaderComponent} from './app1-loader/app1-loader.component';
 import {App2LoaderComponent} from './app2-loader/app2-loader.component';
 import {HttpClientModule} from '@angular/common/http';
+import { DynamicAppLoaderComponent } from './dynamic-app-loader/dynamic-app-loader.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppComponent,
     App1LoaderComponent,
     App2LoaderComponent,
+    DynamicAppLoaderComponent,
   ],
   imports: [
     BrowserModule,
