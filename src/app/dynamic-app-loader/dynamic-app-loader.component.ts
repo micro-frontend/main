@@ -30,6 +30,7 @@ export class DynamicAppLoaderComponent implements OnInit, OnDestroy {
     zip(...scripts, (...contents) => contents.join('\n//////////////////\n'))
       .pipe(
         map(content => content.replace(/__AppLoaderDynamicId__/g, this.id)),
+        map(content => `(function() {\n${content}\n})()`),
       )
       .subscribe((content) => {
         this.zone.runOutsideAngular(() => {
